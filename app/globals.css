@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+
+body {
+  min-height: 100vh;
+  color: #e6eaf7;
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background:
+    radial-gradient(1200px 600px at 10% -10%, rgba(99, 102, 241, 0.25), transparent),
+    radial-gradient(900px 500px at 100% 0%, rgba(34, 211, 238, 0.15), transparent),
+    #070b1a;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.1rem;
+  border-radius: 12px;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(90deg, #22d3ee, #6366f1 55%, #a855f7);
+  box-shadow: 0 0 22px rgba(99, 102, 241, 0.45);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.btn:hover { box-shadow: 0 0 32px rgba(34, 211, 238, 0.55); }
+.btn:active { transform: scale(0.98); }
+.btn-ghost {
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: none;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+:focus-visible { outline: 2px solid #22d3ee; outline-offset: 2px; }
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
